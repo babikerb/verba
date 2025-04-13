@@ -24,8 +24,8 @@ const Transcribe: React.FC = () => {
   const router = useRouter();
   const audioChunksRef = useRef<Float32Array[]>([]);
   const activeRecognitions = useRef<Set<string>>(new Set());
-  const VOLUME_THRESHOLD = 0.01; 
-  const MIN_SPEECH_DURATION = 1000;
+  const VOLUME_THRESHOLD = 0.005; 
+  const MIN_SPEECH_DURATION = 500;
 
   // User Auth
   useEffect(() => {
